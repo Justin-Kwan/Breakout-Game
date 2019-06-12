@@ -1,6 +1,6 @@
 /**
  * Name        -> Justin Kwan
- * Date        -> January 9, 2018
+ * Date        -> January 9, 2019
  * Description -> This program is a game of brick breaker similar to Atari Breakout,
  *                where the user must reflect a bouncing ball off a moveable racket to destroy
  *                all blocks
