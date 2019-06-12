@@ -675,17 +675,11 @@ int main(int argc, char** argv) {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(SCREEN_WIDTH, SCREEN_HEIGHT);
     glutCreateWindow("Breakout");
-    // draws front and back of all polygons
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    // call function that sets up all game objects
-    initGameObjects();
-    // pass callback function that detect racket movement
-    glutSpecialFunc(controlRacketMovement);
-    // pass callback function that detects keyboard strokes for ASCII keys
-    glutKeyboardFunc(controlGameReplay);
-
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);              // draws front and back of all polygons
+    initGameObjects();                                      // call function that sets up all game objects
+    glutSpecialFunc(controlRacketMovement);                 // pass callback function that detect racket movement
+    glutKeyboardFunc(controlGameReplay);                    // pass callback function that detects keyboard strokes for ASCII keys
     glutSpecialUpFunc(releaseKeyStopRacket);
-
     glutDisplayFunc(display);
     glutIdleFunc(idleFunc);
     glutMainLoop();
